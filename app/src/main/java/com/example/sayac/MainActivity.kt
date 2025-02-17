@@ -24,7 +24,8 @@ class MainActivity : ComponentActivity() {
         val btnReset: Button = findViewById(R.id.btnReset)
 
         btnIncrease.setOnClickListener {
-            // Animasyonu uygula
+
+            // Buton boyut animasyonu uygula
             animateButton(btnIncrease)
 
             val amountString = editTextAmount.text.toString()
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
                 val amount = amountString.toInt()
                 counter += amount
                 txtCounter.text = counter.toString()
-            }else{
+            } else {
                 counter++
                 txtCounter.text = counter.toString()
             }
