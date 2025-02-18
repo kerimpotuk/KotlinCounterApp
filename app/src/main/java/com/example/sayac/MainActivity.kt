@@ -7,17 +7,19 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import android.animation.ObjectAnimator
 import android.view.View
-
+import com.airbnb.lottie.LottieAnimationView
 
 class MainActivity : ComponentActivity() {
     private lateinit var txtCounter: TextView
     private lateinit var editTextAmount: EditText
+    private lateinit var firework:LottieAnimationView
     private var counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        firework = findViewById(R.id.firework)
         txtCounter = findViewById(R.id.txtCounter)
         editTextAmount = findViewById(R.id.editTextAmount)
         val btnIncrease: Button = findViewById(R.id.btnIncrease)
@@ -60,5 +62,8 @@ class MainActivity : ComponentActivity() {
         // Animasyonları başlat
         scaleX.start()
         scaleY.start()
+
+        firework.repeatCount = 0
+        firework.playAnimation()
     }
 }
