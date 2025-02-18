@@ -63,7 +63,6 @@ class MainActivity : ComponentActivity() {
         scaleX.start()
         scaleY.start()
 
-        firework.repeatCount = 0
         firework.playAnimation()
     }
 }

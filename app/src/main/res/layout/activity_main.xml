@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         app:lottie_rawRes="@raw/firework"
         app:lottie_autoPlay="false"
+        app:lottie_repeatCount="0"
         app:lottie_loop="false" />
 
     <TextView
